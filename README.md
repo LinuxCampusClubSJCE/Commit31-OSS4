@@ -244,5 +244,3 @@ If you like this project:
 * 🤝 Contribute
 
 ---
-
-If you want, I can now make this look **like a professional GitHub trending project README** with badges, shields, contribution graphs, and better formatting 🔥
