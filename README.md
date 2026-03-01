@@ -97,16 +97,85 @@ This platform promotes learning in public, knowledge sharing, and beginner-frien
 ```
 Commit31-OSS4/
 │
-├── backend/
+├── client/                      # Frontend (React)
+│   ├── public/
+│   │   └── index.html
+│   │
 │   ├── src/
+│   │   ├── assets/              # Images, icons
+│   │   ├── components/          # Reusable UI components
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── PostCard.jsx
+│   │   │   ├── ProtectedRoute.jsx
+│   │   │   └── Loader.jsx
+│   │   │
+│   │   ├── pages/               # Page-level components
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── BlogFeed.jsx
+│   │   │   ├── BlogDetails.jsx
+│   │   │   ├── Profile.jsx
+│   │   │   └── CreatePost.jsx
+│   │   │
+│   │   ├── context/             # Global state
+│   │   │   └── AuthContext.jsx
+│   │   │
+│   │   ├── services/            # API calls
+│   │   │   ├── authService.js
+│   │   │   ├── postService.js
+│   │   │   └── commentService.js
+│   │   │
+│   │   ├── utils/               # Helper functions
+│   │   │   └── formatDate.js
+│   │   │
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   │
 │   ├── .env
+│   ├── package.json
+│   └── tailwind.config.js
+│
+│
+├── server/                      # Backend (Express)
+│   ├── config/
+│   │   └── db.js                # PostgreSQL connection
+│   │
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── postController.js
+│   │   ├── commentController.js
+│   │   └── profileController.js
+│   │
+│   ├── middleware/
+│   │   ├── authMiddleware.js
+│   │   └── errorMiddleware.js
+│   │
+│   ├── models/
+│   │   ├── userModel.js
+│   │   ├── postModel.js
+│   │   ├── commentModel.js
+│   │   └── likeModel.js
+│   │
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── postRoutes.js
+│   │   ├── commentRoutes.js
+│   │   └── profileRoutes.js
+│   │
+│   ├── utils/
+│   │   └── generateToken.js
+│   │
+│   ├── .env
+│   ├── server.js
 │   └── package.json
 │
-├── frontend/
-│   ├── src/
-│   └── package.json
 │
-└── README.md
+├── README.md
+├── .gitignore
+└── package.json (optional root config)
 ```
 
 ---
