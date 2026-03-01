@@ -95,7 +95,7 @@ This platform promotes learning in public, knowledge sharing, and beginner-frien
 # 📁 Project Structure
 
 ```
-student-dev-platform/
+Commit31-OSS4/
 │
 ├── backend/
 │   ├── src/
@@ -116,8 +116,8 @@ student-dev-platform/
 ## 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/student-dev-platform.git
-cd student-dev-platform
+git clone https://github.com/YOUR_USERNAME/Commit31-OSS4.git
+cd Commit31-OSS4
 ```
 
 ---
@@ -133,7 +133,7 @@ Create a `.env` file inside the `backend` folder:
 
 ```
 PORT=5000
-DATABASE_URL=postgresql://postgres:yourpassword@localhost:5432/student_dev_platform
+DATABASE_URL=postgresql://postgres:yourpassword@localhost:5432/Commit31-OSS4
 JWT_SECRET=supersecretkey
 ```
 
@@ -174,7 +174,7 @@ http://localhost:5173
 Install PostgreSQL and create database:
 
 ```sql
-CREATE DATABASE student_dev_platform;
+CREATE DATABASE Commit31-OSS4;
 ```
 
 ---
