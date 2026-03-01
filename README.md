@@ -97,7 +97,7 @@ This platform promotes learning in public, knowledge sharing, and beginner-frien
 ```
 Commit31-OSS4/
 │
-├── client/                      # Frontend (React)
+├── frontend/                      # Frontend (React)
 │   ├── public/
 │   │   └── index.html
 │   │
@@ -139,7 +139,7 @@ Commit31-OSS4/
 │   └── tailwind.config.js
 │
 │
-├── server/                      # Backend (Express)
+├── backend/                      # Backend (Express)
 │   ├── config/
 │   │   └── db.js                # PostgreSQL connection
 │   │
