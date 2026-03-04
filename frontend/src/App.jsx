@@ -1,17 +1,36 @@
-import "./App.css"
+import Register from "./pages/register";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import BlogFeed from "./pages/BlogFeed";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100" style={{ width: "100%", margin: 0, padding: 0 }}>
-      <div className="flex-1 flex items-center justify-center">
-        <h1 className="text-3xl font-bold text-blue-600">
-          Student Developer Platform 🚀
-        </h1>
-      </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-[#0F172A]">
+        <Navbar />
 
-      <Footer />
-    </div>
+        <main className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)]">
+          <Routes>
+            <Route path="/" element={<Home />} />
+
+            <Route
+              path="/register"
+              element={
+                <div className="w-full max-w-md">
+                  <Register />
+                </div>
+              }
+            />
+
+            <Route path="/blogs" element={<BlogFeed />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
