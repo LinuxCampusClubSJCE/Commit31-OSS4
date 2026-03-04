@@ -1,34 +1,17 @@
-import Register from "./pages/register";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import "./App.css"
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen bg-[#0F172A]">
-        <Navbar />
-        <main className="flex flex-col items-center justify-center min-h-[calc(100vh-64px)]">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <h1 className="text-3xl font-bold text-[#E2E8F0]">
-                  Student Developer Platform 🚀
-                </h1>
-              }
-            />
-            <Route
-              path="/register"
-              element={
-                <div className="w-full max-w-md">
-                  <Register />
-                </div>
-              }
-            />
-          </Routes>
-        </main>
+    <div className="min-h-screen flex flex-col bg-gray-100" style={{ width: "100%", margin: 0, padding: 0 }}>
+      <div className="flex-1 flex items-center justify-center">
+        <h1 className="text-3xl font-bold text-blue-600">
+          Student Developer Platform 🚀
+        </h1>
       </div>
-    </BrowserRouter>
+
+      <Footer />
+    </div>
   );
 }
 
