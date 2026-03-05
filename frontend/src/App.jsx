@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import BlogFeed from "./pages/BlogFeed";
 import Register from "./pages/register";
 import BlogDetails from "./pages/BlogDetails";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/blogs" element={<BlogFeed />} />
             <Route path="/register" element={<Register />} />
             <Route path="/blog/:id" element={<BlogDetails />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </main>
         <Footer />
