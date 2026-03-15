@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Home";
 import BlogFeed from "./pages/BlogFeed";
 import Register from "./pages/register";
@@ -20,7 +21,14 @@ function App() {
             <Route path="/blogs" element={<BlogFeed />} />
             <Route path="/register" element={<Register />} />
             <Route path="/blog/:id" element={<BlogDetails />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route
+              path="/profile"
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/login" element={<Login />} />
           </Routes>
         </main>
