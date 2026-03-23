@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const db = require('./config/db')
+const authRoutes = require('./routes/authRoutes')
 
 const app = express()
 
@@ -26,6 +27,8 @@ app.get('/api/db-test', async (req, res) => {
     res.status(500).json({ status: 'error', message: 'Database test failed' })
   }
 })
+
+app.use('/api/auth', authRoutes)
 
 const PORT = process.env.PORT ?? 5000
 
